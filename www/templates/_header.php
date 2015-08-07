@@ -31,8 +31,8 @@ defined('_SEECRET') or die('Ай-яй-яй, сюда нельзя!');
 	</span>
 </div>
 <div class="locations">
-	<a href="/" class="planet"><?=$data['user_params']['location_type_name']?> <?=$data['user_params']['planet_name']?></a>
-	<span class="galaxy">Галактика <?=$data['user_params']['galaxy_name']?></span>
+	<a href="/" class="planet"><?=$data['user_params']['location_type_name']?> "<?=$data['user_params']['planet_name']?>"</a>
+	<span class="galaxy">Галактика "<?=$data['user_params']['galaxy_name']?>"</span>
 </div>
 <div class="ship">
 	<a class="my_ship_link" href="/ship"><img src="/img/exp.png"> Мой корабль</a>
