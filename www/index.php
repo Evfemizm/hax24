@@ -1,21 +1,21 @@
 <?php
-//error_reporting(E_ALL);
+// error_reporting(E_ALL);
 include 'connect.php';
 session_start();
 $data = array();
 $pageName = substr($_SERVER['REQUEST_URI'], 1);
 $simbolNum = strpos($pageName, '?');
-/*если в запросе есть get значение, то срезаем его*/
+/* если в запросе есть get значение, то срезаем его */
 if ($simbolNum != 0){
 	$pageName = substr($pageName, 0, $simbolNum);
 }
 /*если обратились к главной*/
 if ($pageName == 'index' || $pageName == ''){
-/*если юзверь авторизован, то отдаем ему страницу с его данными, иначе просим авторизоваться или зарегаться*/
+	/*если юзверь авторизован, то отдаем ему страницу с его данными, иначе просим авторизоваться или зарегаться*/
 	if(isAuth($link)){
 	ob_start();
 		$data['user_id']=getId($link);
-		$data['user_params'] = getUserParams($link,$data['user_id']);
+		$data['user_params'] = getUserParams($link, $data['user_id']);
 		$data['time'] = date('H:i');
 		echo t('_header',$data);
 		include(APP_DIR.'/pages/index_authorized.php');
@@ -26,9 +26,9 @@ if ($pageName == 'index' || $pageName == ''){
 	}
 	/*иначе лезем за нужной страницей*/
 } else{
-ob_start();
+	ob_start();
 	if(isAuth($link)){
-		$data['user_id']=getId($link);
+		$data['user_id'] = getId($link);
 		$data['user_params'] = getUserParams($link,$data['user_id']);
 		$data['time'] = date('H:m');
 		echo t('_header', $data);	
