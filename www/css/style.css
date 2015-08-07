@@ -1,0 +1,93 @@
+body {
+    background: #2C2D48;
+	color: #fff;
+}
+a{
+	color: #fff;
+}
+h1 {
+    text-align: center;
+    font-size: 1.3em;
+}
+.wrapper {
+    background-color: #2A3D61;
+    max-width: 680px;
+    margin: 0 auto;
+}
+.wrapper>div{
+    padding: 5px 25px;
+	font-size: 1.2em;
+    border-bottom: #595E7D 3px solid;
+	overflow:hidden;
+}
+div.game_title {
+    text-align: center;
+    font-size: 1.4em;
+    padding: 10px;
+    font-weight: 700;
+}
+.time, .galaxy, .crash {
+    float: right;
+	display:block;
+	width:40%;
+	text-align:right;
+}
+.user_name, .planet, .my_ship_link {
+    float: left;
+	display:block;
+	width:55%;
+}
+.user_param {
+    text-align: center;
+}
+.user_param span:first-child {
+    text-align: left;
+}
+.user_param span:last-child {
+    text-align: right;
+}
+div.user_param span {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+}
+.buildings, .actions {
+    overflow:hidden;
+	text-align:center;
+	    padding: 20px 0;
+}
+.buildings{
+    border-bottom: #fff 3px solid;
+}
+.buildings a, .actions form label{
+    display: inline-block;
+    width: 30%;
+	cursor:pointer;
+	    overflow: hidden;
+
+}
+.buildings a img, .actions form label img {
+    width: 100%;
+}
+.buildings a span, .actions form label input {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    color: #2A3D61;
+	cursor:pointer;
+	border: none;
+    padding: 5px 0;
+    font-size: 1em;
+    font-family: inherit;
+	
+}
+.message {
+    padding: 10px 0;
+    border-bottom: 1px #6D7688 solid;
+}
+.message>div {
+    padding-top: 10px;
+}
+.private>span,  .private>a {
+    font-weight: 900;
+}
