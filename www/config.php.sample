@@ -1,0 +1,5 @@
+<?php
+$config['db_password'] = 'db_pass';
+$config['db_host'] = 'db_host';
+$config['db_login'] = 'db_login';
+$config['db_name'] = 'db_name';
